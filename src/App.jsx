@@ -1,10 +1,10 @@
-import "./App.css";
+import Todolist from "./Todolist";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-danger">Hello Edupoly</h1>
-      <h1 className="bg-success">Hello Meghana</h1>
+    <div className="border border-success p-2 m-2">
+      <h1>App</h1>
+      <Todolist></Todolist>
     </div>
   );
 }
