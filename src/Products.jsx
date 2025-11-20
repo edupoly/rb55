@@ -7,17 +7,17 @@ function Products() {
   var [isPending, startTransition] = useTransition();
 
   useEffect(() => {
-    // startTransition(async function () {
-    //   var res = await fetch("https://dummyjson.com/products");
-    //   var data = await res.json();
-    //   setProducts(data.products);
-    // });
-    fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProducts(data.products);
-      });
+    startTransition(async function () {
+      var res = await fetch("https://dummyjson.com/products");
+      var data = await res.json();
+      setProducts(data.products);
+    });
+    // fetch("https://dummyjson.com/products")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setProducts(data.products);
+    //   });
   }, []);
   return (
     <div className="border border-success border-2 m-2 p-2">
