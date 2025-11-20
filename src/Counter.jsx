@@ -3,7 +3,14 @@ function Counter() {
   var [c, setC] = React.useState(0);
 
   function inc() {
-    setC(c + 1);
+    setC((cv) => {
+      return cv + 1;
+    });
+  }
+  function dec() {
+    setC((cv) => {
+      return cv - 1;
+    });
   }
   return (
     <div className="border border-success p-2 m-2">
@@ -15,7 +22,13 @@ function Counter() {
       >
         Inc
       </button>
-      <button>Dec</button>
+      <button
+        onClick={() => {
+          dec();
+        }}
+      >
+        Dec
+      </button>
     </div>
   );
 }
