@@ -11,7 +11,10 @@ function Todolist() {
   function addNewTodo() {
     //get the value from textbox
     var ntodo = document.getElementById("d1").value;
-    settodos([...todos, ntodo]);
+    settodos((ctodos) => {
+      ctodos.push(ntodo);
+      return [...ctodos];
+    });
     //insert value into state varaible
   }
   function deleteTodo(ind) {
