@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
 
 function Todolist() {
   var [todos, settodos] = useState(["book tickets", "plan cricket"]);
@@ -19,9 +20,9 @@ function Todolist() {
       >
         Add Todo
       </button>
-      <ul>
+      <ul className="list-unstyled">
         {todos.map((t) => {
-          return <li>{t}</li>;
+          return <Todo t={t}></Todo>;
         })}
       </ul>
     </div>
