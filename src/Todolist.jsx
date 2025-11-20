@@ -6,7 +6,10 @@ function Todolist() {
   function addNewTodo() {
     //get the value from textbox
     var ntodo = document.getElementById("d1").value;
-    settodos([...todos, ntodo]);
+    settodos((ct) => {
+      ct.push(ntodo);
+      return [...ct];
+    });
     //insert value into state varaible
   }
   return (
