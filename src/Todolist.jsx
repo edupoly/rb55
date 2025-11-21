@@ -18,9 +18,11 @@ function Todolist() {
     //insert value into state varaible
   }
   function deleteTodo(ind) {
-    var temp = [...todos];
-    temp.splice(ind, 1);
-    settodos([...temp]);
+    settodos((ctodos) => ctodos.filter((t, i) => i != ind));
+    // settodos((ctodos) => {
+    //   ctodos.splice(ind, 1);
+    //   return [...ctodos];
+    // });
   }
   return (
     <div className="border border-success p-2 m-2">
