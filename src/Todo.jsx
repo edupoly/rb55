@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function Todo({ t, deleteTodo, i }) {
+function Todo({ t, i, deleteTodo }) {
   useEffect(() => {
     console.log(`${t} rendered`);
   });
@@ -20,4 +20,5 @@ function Todo({ t, deleteTodo, i }) {
   );
 }
 
-export default Todo;
+export default React.memo(Todo);
+// React.memo()
