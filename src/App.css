@@ -1,0 +1,9 @@
+#nav{
+    display: flex;
+    list-style: none;
+    gap:10px;
+}
+#nav li{
+    border:2px solid;
+    padding:5px 10px;
+}
