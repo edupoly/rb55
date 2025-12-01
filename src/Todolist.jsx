@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 function Todolist(props) {
-  console.log(props);
+  console.log("Todolist Rendered");
   var [newtodo, setnewtodo] = useState("");
   return (
     <div className="border border-2 border-primary p-2 m-2">
