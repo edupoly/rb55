@@ -1,10 +1,13 @@
 import "./App.css";
+import Counter from "./features/counter/Counter";
+import Todolist from "./features/todolist/Todolist";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-danger">Hello Edupoly</h1>
-      <h1 className="bg-success">Hello Meghana</h1>
+    <div className="border border-danger border-2 m-2 p-2">
+      <h1>Hello Edupoly</h1>
+      <Counter></Counter>
+      <Todolist></Todolist>
     </div>
   );
 }
