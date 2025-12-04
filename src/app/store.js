@@ -5,6 +5,7 @@ import { productsApi } from "../services/products";
 import { pokemonApi } from "../services/pokemon";
 import { imdbApi } from "../services/imbd";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { todosApi } from "../services/todosApi";
 export const store = configureStore({
   reducer: {
     cntR: counterReducer,
@@ -12,12 +13,14 @@ export const store = configureStore({
     [productsApi.reducerPath]: productsApi.reducer,
     [pokemonApi.reducerPath]: pokemonApi.reducer,
     [imdbApi.reducerPath]: imdbApi.reducer,
+    [todosApi.reducerPath]: todosApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       productsApi.middleware,
       pokemonApi.middleware,
-      imdbApi.middleware
+      imdbApi.middleware,
+      todosApi.middleware
     ),
 });
 setupListeners(store.dispatch);

@@ -22,3 +22,7 @@ function CrewDetails() {
 }
 
 export default CrewDetails;
+// sending data ====> post ====> C(Create)
+// retriving data ==> get =====> R(read)
+// update data =====> put =====> U(Update)
+// delete data =====> delete ==> D(Delete)
