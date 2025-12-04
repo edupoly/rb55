@@ -1,5 +1,5 @@
 import Counter from "./Counter";
-import { CounterProvider } from "./CounterProvider";
+import { CounterProvider } from "./CounterContext";
 
 function App() {
   return (
